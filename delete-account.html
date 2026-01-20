@@ -30,7 +30,7 @@
   <script>
     function showLang(lang) {
       document.querySelectorAll('[data-lang]').forEach(el => {
-        el.style.display = el.datasetLang === lang ? 'block' : 'none';
+        el.style.display = el.dataset.lang === lang ? 'block' : 'none';
       });
     }
   </script>
@@ -38,11 +38,13 @@
 
 <body>
 
+  <!-- Language Switch -->
   <div class="lang-switch">
     <button onclick="showLang('en')">English</button>
     <button onclick="showLang('it')">Italiano</button>
   </div>
 
+  <!-- Logo -->
   <div style="text-align:center; margin-bottom: 24px;">
     <img src="LogoStripeSize.png" alt="InfermiereNow logo" style="max-width:120px;">
   </div>
@@ -145,6 +147,7 @@
 
   <hr>
 
+  <!-- Navigation Links -->
   <p class="nav-links" style="text-align:center;">
     <a href="privacy.html">Privacy Policy</a> |
     <a href="terms.html">Terms &amp; Conditions</a>
@@ -152,4 +155,5 @@
 
 </body>
 </html>
+
 
