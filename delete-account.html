@@ -11,27 +11,59 @@
       margin: 40px auto;
       line-height: 1.6;
     }
+
+    /* Language Switch */
     .lang-switch {
       text-align: right;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
     .lang-switch button {
       margin-left: 8px;
       padding: 6px 12px;
       cursor: pointer;
+      border: 1px solid #ccc;
+      background-color: #f8f8f8;
     }
+    .lang-switch button.active {
+      background-color: #00bfa5;
+      color: white;
+      border-color: #00bfa5;
+    }
+
     .section {
       margin-top: 24px;
     }
+
     .nav-links {
-      margin-top: 24px;
+      margin-top: 40px;
+      text-align: center;
+    }
+    .nav-links a {
+      margin: 0 8px;
+      text-decoration: none;
+      color: #00bfa5;
+      font-weight: bold;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
     }
   </style>
+
   <script>
     function showLang(lang) {
       document.querySelectorAll('[data-lang]').forEach(el => {
-        el.style.display = el.dataset.lang === lang ? 'block' : 'none';
+        el.style.display = (el.dataset.lang === lang) ? 'block' : 'none';
       });
+      // toggle active button
+      document.querySelectorAll('.lang-switch button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      document.getElementById('btn-' + lang).classList.add('active');
+    }
+
+    // Set default language
+    window.onload = function() {
+      showLang('en');
     }
   </script>
 </head>
@@ -40,8 +72,8 @@
 
   <!-- Language Switch -->
   <div class="lang-switch">
-    <button onclick="showLang('en')">English</button>
-    <button onclick="showLang('it')">Italiano</button>
+    <button id="btn-en" onclick="showLang('en')">English</button>
+    <button id="btn-it" onclick="showLang('it')">Italiano</button>
   </div>
 
   <!-- Logo -->
@@ -50,7 +82,7 @@
   </div>
 
   <!-- ENGLISH -->
-  <div data-lang="en" class="section" style="display:block">
+  <div data-lang="en" class="section">
 
     <h1>InfermiereNow – Account & Data Deletion</h1>
 
@@ -98,7 +130,7 @@
   </div>
 
   <!-- ITALIANO -->
-  <div data-lang="it" class="section" style="display:none">
+  <div data-lang="it" class="section">
 
     <h1>InfermiereNow – Eliminazione Account e Dati</h1>
 
@@ -148,12 +180,13 @@
   <hr>
 
   <!-- Navigation Links -->
-  <p class="nav-links" style="text-align:center;">
+  <p class="nav-links">
     <a href="privacy.html">Privacy Policy</a> |
     <a href="terms.html">Terms &amp; Conditions</a>
   </p>
 
 </body>
 </html>
+
 
 
