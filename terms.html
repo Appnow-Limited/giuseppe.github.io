@@ -1,33 +1,114 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Terms & Conditions - Appnow Limited</title>
-  <meta name="description" content="Short Terms & Conditions for Appnow Limited." />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>InfermiereNow – Terms & Conditions</title>
+
   <style>
-    body{font-family:Arial, sans-serif;max-width:800px;margin:40px auto;padding:20px;line-height:1.6;background:#f7f7f7;color:#0f172a}
-    h1,h2,h3{color:#0b63ff}
-    a{color:#0b63ff;text-decoration:none}
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      line-height: 1.6;
+    }
+    .lang-switch {
+      text-align: right;
+      margin-bottom: 10px;
+    }
+    .lang-switch button {
+      margin-left: 8px;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
   </style>
+
+  <script>
+    function showLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
+      });
+    }
+  </script>
 </head>
+
 <body>
+
+<div class="lang-switch">
+  <button onclick="showLang('en')">English</button>
+  <button onclick="showLang('it')">Italiano</button>
+</div>
+
+<div style="text-align:center; margin-bottom:24px;">
+  <img src="LogoStripeSize.png" alt="InfermiereNow logo" style="max-width:120px;">
+</div>
+
+<!-- ENGLISH -->
+<div data-lang="en" style="display:block;">
   <h1>Terms & Conditions</h1>
-  <p>These Terms &amp; Conditions apply to interactions with Appnow Limited via this company website.</p>
 
-  <h2>1. Acceptance</h2>
-  <p>By contacting Appnow Limited or using information on this site you accept these Terms &amp; Conditions.</p>
+  <h2>1. Eligibility</h2>
+  <p>The app is available only to users aged 18 or older.</p>
 
-  <h2>2. Use of Content</h2>
-  <p>All content on this site is owned by Appnow Limited or used with permission. You may not reproduce content without prior consent.</p>
+  <h2>2. Platform role</h2>
+  <p>InfermiereNow is a technology platform and does not provide healthcare services.</p>
 
-  <h2>3. Liability</h2>
-  <p>Appnow Limited provides information on this site for general purposes. We do not accept liability for decisions made based on this information. For product-specific terms, please consult the relevant app's terms.</p>
+  <h2>3. No appointment management</h2>
+  <p>The app does not manage appointments or guarantee outcomes.</p>
 
-  <h2>4. Changes</h2>
-  <p>We may update these Terms &amp; Conditions from time to time. The latest version will always be available on this page.</p>
+  <h2>4. Subscriptions</h2>
+  <ul>
+    <li>Monthly or annual subscriptions</li>
+    <li>Prices may change</li>
+    <li>Payments processed via Stripe</li>
+  </ul>
 
-  <h2>Contact</h2>
-  <p>For questions about these Terms &amp; Conditions, contact us at <a href="mailto:admin@appnowlimited.com">admin@appnowlimited.com</a>.</p>
+  <h2>5. Account suspension</h2>
+  <p>We may suspend accounts in case of violations or misuse.</p>
+
+  <h2>6. Limitation of liability</h2>
+  <p>
+    InfermiereNow is not responsible for user interactions, medical outcomes,
+    WhatsApp communications, or third-party services.
+  </p>
+</div>
+
+<!-- ITALIANO -->
+<div data-lang="it" style="display:none;">
+  <h1>Termini e Condizioni</h1>
+
+  <h2>1. Requisiti</h2>
+  <p>L’uso dell’app è consentito solo a utenti maggiorenni (18+).</p>
+
+  <h2>2. Ruolo della piattaforma</h2>
+  <p>InfermiereNow è esclusivamente una piattaforma tecnologica e non fornisce servizi sanitari.</p>
+
+  <h2>3. Nessuna prenotazione</h2>
+  <p>L’app non gestisce appuntamenti né garantisce risultati.</p>
+
+  <h2>4. Abbonamenti</h2>
+  <ul>
+    <li>Abbonamenti mensili o annuali</li>
+    <li>Prezzi soggetti a modifiche</li>
+    <li>Pagamenti gestiti tramite Stripe</li>
+  </ul>
+
+  <h2>5. Sospensione account</h2>
+  <p>Possiamo sospendere account in caso di violazioni o uso improprio.</p>
+
+  <h2>6. Limitazione di responsabilità</h2>
+  <p>
+    InfermiereNow non è responsabile per rapporti tra utenti,
+    esiti sanitari, comunicazioni WhatsApp o servizi esterni.
+  </p>
+</div>
+
+<hr>
+<p style="text-align:center;">
+  <a href="delete-account.html">Delete Account</a> |
+  <a href="privacy.html">Privacy Policy</a>
+</p>
+
 </body>
 </html>
+
