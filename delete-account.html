@@ -1,62 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>InfermiereNow – Account Deletion</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>InfermiereNow – Delete Account</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      line-height: 1.6;
+    }
+    .lang-switch {
+      text-align: right;
+      margin-bottom: 10px;
+    }
+    .lang-switch button {
+      margin-left: 8px;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+    .section {
+      margin-top: 24px;
+    }
+    .nav-links {
+      margin-top: 24px;
+    }
+  </style>
+  <script>
+    function showLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.datasetLang === lang ? 'block' : 'none';
+      });
+    }
+  </script>
 </head>
-<body style="font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; line-height: 1.6;">
 
-  <h1>InfermiereNow – Account & Data Deletion</h1>
+<body>
 
-  <p>
-    Users of the <strong>InfermiereNow</strong> app can request the deletion of their account
-    and associated personal data at any time.
-  </p>
-
-  <h2>How to request account deletion via email</h2>
-  <p>
-    To request deletion of your InfermiereNow account, please contact us by email:
-  </p>
-  <p>
-    📧 <strong>infermierenow@gmail.com</strong>
-  </p>
-  <p>
-    Please include the email address associated with your InfermiereNow account.
-  </p>
-
-  <h2>How to delete your account from the app</h2>
-  <p>
-    You can also delete your account directly in the InfermiereNow app by following these steps:
-  </p>
-  <ol>
-    <li>Open the InfermiereNow app and navigate to the <strong>Profile</strong> tab.</li>
-    <li>Scroll down to the bottom of the page.</li>
-    <li>Click on <strong>Delete Profile</strong>.</li>
-    <li>Confirm by selecting <strong>Delete Profile</strong> again.</li>
-  </ol>
-  <p>
-    Once confirmed, your account and associated data will be permanently deleted from the app.
-  </p>
-
-  <h2>Data that will be deleted</h2>
-  <ul>
-    <li>User account information (name, email)</li>
-    <li>Profile data</li>
-    <li>Location data</li>
-    <li>Reviews and in-app activity</li>
-    <li>Authentication credentials</li>
-  </ul>
-
-  <h2>Data retention</h2>
-  <p>
-    Some data may be retained for legal, security, or fraud-prevention purposes
-    for up to <strong>90 days</strong>, after which it will be permanently deleted.
-  </p>
+  <div class="lang-switch">
+    <button onclick="showLang('en')">English</button>
+    <button onclick="showLang('it')">Italiano</button>
+  </div>
 
   <div style="text-align:center; margin-bottom: 24px;">
     <img src="LogoStripeSize.png" alt="InfermiereNow logo" style="max-width:120px;">
   </div>
 
+  <!-- ENGLISH -->
+  <div data-lang="en" class="section" style="display:block">
+
+    <h1>InfermiereNow – Account & Data Deletion</h1>
+
+    <p>
+      Users of the <strong>InfermiereNow</strong> app can request the deletion of their account
+      and all associated personal data at any time.
+    </p>
+
+    <h2>How to request deletion via email</h2>
+    <p>
+      To request deletion of your InfermiereNow account, please contact:
+    </p>
+    <p>
+      📧 <strong>infermierenow@gmail.com</strong><br>
+      Include the email address associated with your InfermiereNow account.
+    </p>
+
+    <h2>How to delete your account from the app</h2>
+    <ol>
+      <li>Open the InfermiereNow app</li>
+      <li>Go to the <strong>Profile</strong> tab</li>
+      <li>Scroll to the bottom of the page</li>
+      <li>Select <strong>Delete Profile</strong></li>
+      <li>Confirm the deletion</li>
+    </ol>
+    <p>
+      Once confirmed, your account and associated data will be permanently removed from the app.
+    </p>
+
+    <h2>Data that will be deleted</h2>
+    <ul>
+      <li>Account details (name, email)</li>
+      <li>Profile information</li>
+      <li>Location data</li>
+      <li>Reviews and in-app activity</li>
+      <li>Authentication credentials</li>
+    </ul>
+
+    <h2>Data retention</h2>
+    <p>
+      Some data may be retained for legal, security, or fraud-prevention purposes for up to
+      <strong>90 days</strong>, after which it will be permanently deleted.
+    </p>
+
+  </div>
+
+  <!-- ITALIANO -->
+  <div data-lang="it" class="section" style="display:none">
+
+    <h1>InfermiereNow – Eliminazione Account e Dati</h1>
+
+    <p>
+      Gli utenti dell’app <strong>InfermiereNow</strong> possono richiedere in qualsiasi momento
+      l’eliminazione del proprio account e dei dati personali associati.
+    </p>
+
+    <h2>Richiesta eliminazione account via email</h2>
+    <p>
+      Per richiedere l’eliminazione del tuo account InfermiereNow scrivi a:
+    </p>
+    <p>
+      📧 <strong>infermierenow@gmail.com</strong><br>
+      Indica l’indirizzo email associato al tuo account.
+    </p>
+
+    <h2>Eliminazione account dall’app</h2>
+    <ol>
+      <li>Apri l’app InfermiereNow</li>
+      <li>Vai alla scheda <strong>Profilo</strong></li>
+      <li>Scorri fino in fondo</li>
+      <li>Seleziona <strong>Elimina Profilo</strong></li>
+      <li>Conferma l’eliminazione</li>
+    </ol>
+    <p>
+      Una volta confermato, il tuo account e i dati associati verranno rimossi in modo permanente.
+    </p>
+
+    <h2>Dati che verranno eliminati</h2>
+    <ul>
+      <li>Dati account (nome, email)</li>
+      <li>Informazioni del profilo</li>
+      <li>Dati di localizzazione</li>
+      <li>Recensioni e attività nell’app</li>
+      <li>Credenziali di autenticazione</li>
+    </ul>
+
+    <h2>Conservazione dei dati</h2>
+    <p>
+      Alcuni dati potrebbero essere conservati per obblighi legali, di sicurezza o prevenzione frodi
+      fino a <strong>90 giorni</strong>, dopo i quali saranno eliminati in modo permanente.
+    </p>
+
+  </div>
+
+  <hr>
+
+  <p class="nav-links" style="text-align:center;">
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="terms.html">Terms &amp; Conditions</a>
+  </p>
+
 </body>
 </html>
+
